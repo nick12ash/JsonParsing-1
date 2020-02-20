@@ -1,11 +1,15 @@
 package domain;
 
-public class Person {
+import com.google.gson.annotations.SerializedName;
 
+public class Person {
+    @SerializedName(value = "first-name", alternate = "firstName")
     String firstName;
 
+    @SerializedName(value = "last-name", alternate = "lastName")
     String lastName;
 
+    @SerializedName(value = "year", alternate = "birthYear")
     int birthYear;
 
     public Person(String firstName, String lastName, int birthYear) {
